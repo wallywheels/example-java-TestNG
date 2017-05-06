@@ -1,4 +1,4 @@
-### Integration example TestNG+logback
+### Integration example TestNG+logback and TestNG+log4j2
 
 Java stack example. 
 
