@@ -1,8 +1,8 @@
 package com.epam.rp.tests.logging;
 
 import com.epam.rp.tests.MagicRandomizer;
-import com.google.common.io.BaseEncoding;
-import com.google.common.io.Resources;
+import rp.com.google.common.io.BaseEncoding;
+import rp.com.google.common.io.Resources;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;

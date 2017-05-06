@@ -1,6 +1,6 @@
 package com.epam.rp.tests;
 
-import com.google.common.io.BaseEncoding;
+import rp.com.google.common.io.BaseEncoding;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

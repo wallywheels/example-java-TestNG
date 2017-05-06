@@ -1,7 +1,7 @@
 package com.epam.rp.tests;
 
-import com.google.common.base.Preconditions;
-import com.google.common.collect.Range;
+import rp.com.google.common.base.Preconditions;
+import rp.com.google.common.collect.Range;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

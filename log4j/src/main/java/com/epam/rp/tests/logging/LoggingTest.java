@@ -1,11 +1,9 @@
 package com.epam.rp.tests.logging;
 
 import com.epam.rp.tests.LoggingUtils;
-import com.google.common.io.Files;
-import com.google.common.io.Resources;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
+import rp.com.google.common.io.Files;
+import rp.com.google.common.io.Resources;
 
 import java.io.File;
 import java.io.IOException;

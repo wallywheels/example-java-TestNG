@@ -1,8 +1,8 @@
 package com.epam.rp.tests.logging;
 
 import com.epam.rp.tests.LoggingUtils;
-import com.google.common.io.Files;
-import com.google.common.io.Resources;
+import rp.com.google.common.io.Files;
+import rp.com.google.common.io.Resources;
 import org.testng.annotations.Test;
 
 import java.io.File;
