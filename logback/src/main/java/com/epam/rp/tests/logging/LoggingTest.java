@@ -31,6 +31,20 @@ public class LoggingTest {
     }
 
     @Test
+    public void logPdf() throws IOException {
+        File file = File.createTempFile("rp-test", ".pdf");
+        Resources.asByteSource(Resources.getResource("files/test.pdf")).copyTo(Files.asByteSink(file));
+        LoggingUtils.log(file, "I'm logging PDF");
+    }
+
+    @Test
+    public void logZip() throws IOException {
+        File file = File.createTempFile("rp-test", ".zip");
+        Resources.asByteSource(Resources.getResource("files/demo.zip")).copyTo(Files.asByteSink(file));
+        LoggingUtils.log(file, "I'm logging ZIP");
+    }
+
+    @Test
     public void logJavascript() throws IOException {
         File file = File.createTempFile("rp-test", ".js");
         Resources.asByteSource(Resources.getResource("files/javascript.js")).copyTo(Files.asByteSink(file));
