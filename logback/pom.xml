@@ -40,7 +40,7 @@
         <dependency>
             <groupId>com.epam.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>3.0.0-RC3-SNAPSHOT</version>
+            <version>3.0.3</version>
         </dependency>
 
         <dependency>
@@ -52,7 +52,7 @@
         <dependency>
             <groupId>com.epam.reportportal</groupId>
             <artifactId>logger-java-logback</artifactId>
-            <version>3.0.0-RC1</version>
+            <version>3.0.0</version>
         </dependency>
 
     </dependencies>

@@ -8,7 +8,6 @@ import com.epam.reportportal.testng.TestNGAgentModule;
 import com.epam.reportportal.testng.TestNGProvider;
 import com.epam.reportportal.testng.TestNGService;
 import com.epam.ta.reportportal.ws.model.StartTestItemRQ;
-import com.google.inject.Module;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.ITestResult;
@@ -16,6 +15,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import rp.com.google.common.base.Optional;
+import rp.com.google.inject.Module;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -23,7 +23,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import static com.google.inject.util.Modules.override;
+import static rp.com.google.inject.util.Modules.override;
 
 /**
  * Extension example
