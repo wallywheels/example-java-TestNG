@@ -3,6 +3,14 @@
     <listeners>
         <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
     </listeners>
+
+    <test name="Parametrized Test">
+        <parameter name="message" value="My great message"/>
+        <classes>
+            <class name="com.epam.rp.tests.parametrized.ParametrizedTest"/>
+        </classes>
+    </test>
+
     <test verbose="1" name="Lucky Pug">
         <classes>
             <class name="com.epam.rp.tests.logging.LuckyPugTest"/>
