@@ -1,6 +1,6 @@
 package com.epam.rp.tests.parametrized;
 
-import com.epam.reportportal.annotations.ReportPortalParameter;
+import com.epam.reportportal.annotations.ParameterKey;
 import com.epam.reportportal.annotations.TestItemUniqueID;
 import com.epam.rp.tests.extension.ParameterizedTest;
 import org.slf4j.Logger;
@@ -36,7 +36,7 @@ public class ParametrizedTest {
 	}
 
 	@Test(threadPoolSize = 2, dataProvider = "bla-bla")
-	public void testParams(@ReportPortalParameter("my_great_parameter") String msg, String msg2) throws InterruptedException {
+	public void testParams(@ParameterKey("my_great_parameter") String msg, String msg2) throws InterruptedException {
 		for (int i = 0; i < 10; i++) {
 			LOGGER.info(msg + ": " + msg2);
 			if (i == 1) {
@@ -47,7 +47,7 @@ public class ParametrizedTest {
 
 	@DataProvider(parallel = true, name = "bla-bla")
 	public Iterator<Object[]> params() {
-		return Arrays.asList(new Object[] { "one", "two" }, new Object[] { "two", "one" }).iterator();
+		return Arrays.asList(new Object[] { "one", "two" }, new Object[] { "two", "one" }, new Object[] { "three", null }).iterator();
 	}
 
 }
