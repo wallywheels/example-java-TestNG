@@ -1,7 +1,7 @@
 package com.epam.rp.tests.parametrized;
 
 import com.epam.reportportal.annotations.ParameterKey;
-import com.epam.reportportal.annotations.TestItemUniqueID;
+import com.epam.reportportal.annotations.UniqueID;
 import com.epam.rp.tests.extension.ParameterizedTest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +25,7 @@ public class ParametrizedTest {
 
 	@Test
 	@Parameters({ "message" })
-	@TestItemUniqueID("HOOOOAA-my-very-unique-id")
+	@UniqueID("HOOOOAA-my-very-unique-id")
 	public void testParams(String msg) throws InterruptedException {
 		for (int i = 0; i < 10; i++) {
 			LOGGER.info(msg + ": " + i);
