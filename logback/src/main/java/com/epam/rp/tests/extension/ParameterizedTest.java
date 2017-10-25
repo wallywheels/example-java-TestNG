@@ -87,7 +87,10 @@ public class ParameterizedTest {
 			FinishTestItemRQ finishTestItemRQ = super.buildFinishTestMethodRq(status, testResult);
 			if (testResult.getThrowable() != null) {
 				String description = Strings.nullToEmpty(finishTestItemRQ.getDescription());
-				description = description + Throwables.getStackTraceAsString(testResult.getThrowable());
+				description = description 
+					+ "```error" 
+					+ Throwables.getStackTraceAsString(testResult.getThrowable()) 
+					+ "```";
 				finishTestItemRQ.setDescription(description);
 			}
 			return finishTestItemRQ;
