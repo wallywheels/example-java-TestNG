@@ -1,11 +1,6 @@
 package com.epam.rp.tests.extension;
 
-import com.epam.reportportal.listeners.ListenerParameters;
-import com.epam.reportportal.service.ReportPortalClient;
 import com.epam.reportportal.testng.BaseTestNGListener;
-import com.epam.reportportal.testng.ITestNGService;
-import com.epam.reportportal.testng.TestNGAgentModule;
-import com.epam.reportportal.testng.TestNGProvider;
 import com.epam.reportportal.testng.TestNGService;
 import com.epam.ta.reportportal.ws.model.StartTestItemRQ;
 import org.slf4j.Logger;
@@ -15,15 +10,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import rp.com.google.common.base.Optional;
-import rp.com.google.inject.Module;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
-import static rp.com.google.inject.util.Modules.override;
 
 /**
  * Extension example
@@ -47,28 +39,25 @@ public class ParameterizedTest {
 
     @DataProvider(parallel = true, name = "bla-bla")
     public Iterator<Object[]> params() {
-        return Arrays.asList(new Object[] { "one" }, new Object[] { "two" }).iterator();
+        return Arrays.asList(new Object[]{"one"}, new Object[]{"two"}).iterator();
     }
 
     public static class ExtendedListener extends BaseTestNGListener {
         public ExtendedListener() {
-            super(override(new TestNGAgentModule()).with(
-                    (Module) binder -> binder.bind(ITestNGService.class).toProvider(new TestNGProvider() {
-                        @Override
-                        protected TestNGService createTestNgService(
-                                ListenerParameters listenerParameters,
-                                ReportPortalClient reportPortalClient) {
-                            return new ParamTaggingTestNgService(listenerParameters, reportPortalClient);
-                        }
-                    })));
+            super(new ParamTaggingTestNgService());
+        }
+
+        @Override
+        public void onTestStart(ITestResult testResult) {
+            System.out.println(testResult.getMethod().getInvocationCount());
+
+            System.out.println(testResult.getMethod().getCurrentInvocationCount());
+            super.onTestStart(testResult);
         }
     }
 
     public static class ParamTaggingTestNgService extends TestNGService {
 
-        public ParamTaggingTestNgService(ListenerParameters parameters, ReportPortalClient reportPortalClient) {
-            super(parameters, reportPortalClient);
-        }
 
         @Override
         protected StartTestItemRQ buildStartStepRq(ITestResult testResult) {
