@@ -17,10 +17,10 @@ public class Runner {
 
 	public static void main(String[] args) {
 		boolean hasFailures = run("suites/logging_tests.xml");
-//		if (hasFailures) {
-//			System.setProperty("rp.rerun", "true");
-//			run("test-output/testng-failed.xml");
-//		}
+		if (hasFailures) {
+			System.setProperty("rp.rerun", "true");
+			run("test-output/testng-failed.xml");
+		}
 		System.exit(hasFailures ? 1 : 0);
 
 	}
