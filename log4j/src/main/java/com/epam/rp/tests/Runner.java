@@ -1,9 +1,6 @@
 package com.epam.rp.tests;
 
 import com.epam.reportportal.testng.ReportPortalTestNGListener;
-import org.testng.IMethodInstance;
-import org.testng.IMethodInterceptor;
-import org.testng.ITestContext;
 import org.testng.ITestNGListener;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -23,7 +20,7 @@ public class Runner {
 
         testNG.setListenerClasses(classes);
 
-        testNG.setTestSuites(Arrays.asList("suites/logging_tests.xml"));
+		testNG.setTestSuites(Arrays.asList("log4j/suites/logging_tests.xml"));
 
         TestListenerAdapter results = new TestListenerAdapter();
         testNG.addListener(results);

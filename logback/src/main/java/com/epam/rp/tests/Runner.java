@@ -16,7 +16,7 @@ import java.util.List;
 public class Runner {
 
 	public static void main(String[] args) {
-		boolean hasFailures = run("suites/logging_tests.xml");
+		boolean hasFailures = run("logback/suites/hroot.xml");
 		if (hasFailures) {
 			System.setProperty("rp.rerun", "true");
 			run("test-output/testng-failed.xml");
