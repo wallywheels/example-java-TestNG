@@ -1,18 +1,15 @@
 package com.epam.rp.tests.extension;
 
-import com.epam.reportportal.testng.ReportPortalTestNGListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Listeners(ReportPortalTestNGListener.class)
 public class RetryTest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(RetryTest.class);

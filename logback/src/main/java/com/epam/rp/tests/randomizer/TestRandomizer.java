@@ -37,6 +37,20 @@ public class TestRandomizer {
 	}
 
 	@Test
+	public void testFiftyFifty() {
+		LOGGER.info("Checking fifty fifty randomizer...");
+		int expected = MagicRandomizer.luckyInt(2);
+		Assert.assertEquals(1, expected);
+	}
+
+	@Test
+	public void testMoreFiftyFifty() {
+		LOGGER.info("Checking fifty fifty randomizer...");
+		int expected = MagicRandomizer.luckyInt(2);
+		Assert.assertEquals(1, expected);
+	}
+
+	@Test
 	public void testRandomizerProbability() {
 		int yes = 0;
 
@@ -57,13 +71,17 @@ public class TestRandomizer {
 		LOGGER.info("Calculated probability is {}", calculatedPercentage);
 
 		Range<Integer> errorRange = Range.closed(probability - PROBABILITY_ERROR, probability + PROBABILITY_ERROR);
-		Assert.assertTrue(errorRange.contains(calculatedPercentage),
-				String.format("Probability should be in range %s, but actual value is %s", errorRange, calculatedPercentage));
+		Assert.assertTrue(
+				errorRange.contains(calculatedPercentage),
+				String.format("Probability should be in range %s, but actual value is %s", errorRange, calculatedPercentage)
+		);
 
 	}
 
 	private Integer calculatePercentage(int count, int value, int scale) {
-		return BigDecimal.valueOf(value).divide(BigDecimal.valueOf(count), scale, BigDecimal.ROUND_HALF_UP)
-				.multiply(BigDecimal.valueOf(100)).intValue();
+		return BigDecimal.valueOf(value)
+				.divide(BigDecimal.valueOf(count), scale, BigDecimal.ROUND_HALF_UP)
+				.multiply(BigDecimal.valueOf(100))
+				.intValue();
 	}
 }

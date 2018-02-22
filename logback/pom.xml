@@ -38,9 +38,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.epam.reportportal</groupId>
+            <groupId>com.github.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>4.0.0-BETA-1</version>
+            <version>6069ef6</version>
         </dependency>
 
         <dependency>
@@ -70,6 +70,8 @@
                     <!-- Uncomment it if you don't want your build to be failed in case of test errors -->
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
+                        <xmlFile>suites/logging_inner_tests.xml</xmlFile>
+                        <xmlFile>suites/extended_tests.xml</xmlFile>
                         <xmlFile>suites/preconditions_suite.xml</xmlFile>
                         <xmlFile>suites/randomizer_suite.xml</xmlFile>
                         <xmlFile>suites/logging_tests.xml</xmlFile>

@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Extended RP tests" parallel="classes">
+
+    <test name="Parameterized Test">
+        <parameter name="message" value="My great message"/>
+        <classes>
+            <class name="com.epam.rp.tests.extension.ParameterizedTest"/>
+        </classes>
+    </test>
+
+    <test name="Retry test">
+        <classes>
+            <class name="com.epam.rp.tests.extension.RetryTest"/>
+        </classes>
+    </test>
+</suite>
