@@ -66,7 +66,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.16</version>
                 <configuration>
-
+                    <!--<parallel>classes</parallel>-->
+                    <!--<threadCount>3</threadCount>-->
                     <!-- Uncomment it if you don't want your build to be failed in case of test errors -->
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
