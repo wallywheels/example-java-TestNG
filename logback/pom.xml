@@ -67,7 +67,7 @@
                 <version>2.16</version>
                 <configuration>
                     <!--<parallel>classes</parallel>-->
-                    <!--<threadCount>3</threadCount>-->
+                    <!--<threadCount>4</threadCount>-->
                     <!-- Uncomment it if you don't want your build to be failed in case of test errors -->
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
@@ -86,6 +86,7 @@
                         <property>
                             <name>listener</name>
                             <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
+                            <!--<value>com.epam.rp.tests.extension.custom.ExtendedListener</value>-->
                         </property>
                     </properties>
                 </configuration>
