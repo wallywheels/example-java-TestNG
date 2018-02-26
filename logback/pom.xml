@@ -72,7 +72,6 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
                         <xmlFile>suites/extended_tests.xml</xmlFile>
-                        <xmlFile>suites/preconditions_suite.xml</xmlFile>
                         <xmlFile>suites/randomizer_suite.xml</xmlFile>
                     </suiteXmlFiles>
                     <!-- ADD working directory to get TestNG know we to find suite files -->
