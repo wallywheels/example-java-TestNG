@@ -5,13 +5,13 @@ import com.epam.reportportal.annotations.UniqueID;
 import com.epam.rp.tests.extension.ParameterizedTest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Parametrized test. You should get all parameters. Custom keys for parameters
@@ -25,27 +25,35 @@ public class ParametrizedTest {
 
 	@Test
 	@Parameters({ "message" })
-	@UniqueID("HOOOOAA-my-very-unique-id")
-	public void testParams(String msg) throws InterruptedException {
-		for (int i = 0; i < 10; i++) {
+	@UniqueID("My_custom_unique_id")
+	public void testParamsUniqueId(String msg) throws InterruptedException {
+		for (int i = 0; i < 3; i++) {
 			LOGGER.info(msg + ": " + i);
-			if (i == 1) {
-				Thread.sleep(TimeUnit.SECONDS.toMillis(5L));
-			}
+		}
+
+		for (int i = 0; i < 3; i++) {
+			LOGGER.debug("Debug message");
+		}
+		for (int i = 0; i < 3; i++) {
+			LOGGER.warn("Warn message");
 		}
 	}
 
-	@Test(threadPoolSize = 2, dataProvider = "bla-bla")
-	public void testParams(@ParameterKey("my_great_parameter") String msg, String msg2) throws InterruptedException {
-		for (int i = 0; i < 10; i++) {
-			LOGGER.info(msg + ": " + msg2);
-			if (i == 1) {
-				Thread.sleep(TimeUnit.SECONDS.toMillis(5L));
-			}
+	@Test(threadPoolSize = 2, dataProvider = "data-provider")
+	public void testCustomParameterKey(@ParameterKey("my_great_parameter") String msg, String msg2) throws InterruptedException {
+		for (int i = 0; i < 3; i++) {
+			LOGGER.info(msg + ": " + i + "msq2:" + msg2);
 		}
+		for (int i = 0; i < 3; i++) {
+			LOGGER.debug("Debug message");
+		}
+		for (int i = 0; i < 3; i++) {
+			LOGGER.warn("Warn message");
+		}
+		Assert.fail("Something wrong with test parameters");
 	}
 
-	@DataProvider(parallel = true, name = "bla-bla")
+	@DataProvider(parallel = true, name = "data-provider")
 	public Iterator<Object[]> params() {
 		return Arrays.asList(new Object[] { "one", "two" }, new Object[] { "two", "one" }, new Object[] { "three", null }).iterator();
 	}

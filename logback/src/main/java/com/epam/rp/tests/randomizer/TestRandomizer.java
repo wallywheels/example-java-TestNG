@@ -2,11 +2,14 @@ package com.epam.rp.tests.randomizer;
 
 import com.epam.rp.tests.MagicRandomizer;
 import com.google.common.collect.Range;
+import com.google.common.io.BaseEncoding;
+import com.google.common.io.Resources;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 
 /**
@@ -51,6 +54,61 @@ public class TestRandomizer {
 	}
 
 	@Test
+	public void logImageBase64() throws IOException {
+
+		/* Generate 10 logs with pugs. Pug may be lucky or unlucky based on randomizer */
+		for (int i = 0; i < 3; i++) {
+			/* 50 percents. So we should have approximately same count of lucky and unlucky pugs */
+			boolean happy = MagicRandomizer.checkYourLucky(30);
+			String image = getImageResource(happy);
+
+			LOGGER.info("RP_MESSAGE#BASE64#{}#{}",
+					BaseEncoding.base64().encode(Resources.asByteSource(Resources.getResource(image)).read()),
+					"Pug is " + (happy ? "HAPPY" : "NOT HAPPY")
+			);
+		}
+
+	}
+
+	@Test
+	public void logImageBaseLuckyPug() throws IOException {
+
+		/* Generate 10 logs with pugs. Pug may be lucky or unlucky based on randomizer */
+		for (int i = 0; i < 3; i++) {
+			/* 50 percents. So we should have approximately same count of lucky and unlucky pugs */
+			boolean happy = MagicRandomizer.checkYourLucky(30);
+			String image = getImageResource(happy);
+
+			LOGGER.info("RP_MESSAGE#BASE64#{}#{}",
+					BaseEncoding.base64().encode(Resources.asByteSource(Resources.getResource(image)).read()),
+					"Pug is " + (happy ? "HAPPY" : "NOT HAPPY")
+			);
+		}
+
+	}
+
+	@Test
+	public void logImageBaseBadLuckyPug() throws IOException {
+
+		/* Generate 10 logs with pugs. Pug may be lucky or unlucky based on randomizer */
+		for (int i = 0; i < 3; i++) {
+			/* 50 percents. So we should have approximately same count of lucky and unlucky pugs */
+			boolean happy = MagicRandomizer.checkYourLucky(1);
+			String image = getImageResource(happy);
+
+			LOGGER.error("RP_MESSAGE#BASE64#{}#{}",
+					BaseEncoding.base64().encode(Resources.asByteSource(Resources.getResource(image)).read()),
+					"Pug is " + (happy ? "HAPPY" : "NOT HAPPY")
+			);
+		}
+		Assert.fail();
+	}
+
+	private String getImageResource(boolean lucky) {
+		return "pug/" + (lucky ? "lucky.jpg" : "unlucky.jpg");
+	}
+
+	@Test
 	public void testRandomizerProbability() {
 		int yes = 0;
 
@@ -71,8 +129,7 @@ public class TestRandomizer {
 		LOGGER.info("Calculated probability is {}", calculatedPercentage);
 
 		Range<Integer> errorRange = Range.closed(probability - PROBABILITY_ERROR, probability + PROBABILITY_ERROR);
-		Assert.assertTrue(
-				errorRange.contains(calculatedPercentage),
+		Assert.assertTrue(errorRange.contains(calculatedPercentage),
 				String.format("Probability should be in range %s, but actual value is %s", errorRange, calculatedPercentage)
 		);
 

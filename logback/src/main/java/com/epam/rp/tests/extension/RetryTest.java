@@ -19,7 +19,7 @@ public class RetryTest {
 	@Test(retryAnalyzer = RetryTest.RetryImpl.class)
 	public void failOne() throws IOException, InterruptedException {
 		String errorMsg = "Ooops";
-		if (20 != COUNTER.get()) {
+		if (5 != COUNTER.get()) {
 			for (int i = 0; i < 10; i++) {
 				LOGGER.error(errorMsg);
 			}
