@@ -3,6 +3,7 @@ package com.epam.rp.tests.extension;
 import com.epam.reportportal.testng.BaseTestNGListener;
 import com.epam.reportportal.testng.TestNGService;
 import com.epam.ta.reportportal.ws.model.FinishTestItemRQ;
+import com.epam.ta.reportportal.ws.model.ItemAttributeResource;
 import com.epam.ta.reportportal.ws.model.StartTestItemRQ;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,11 +65,11 @@ public class ParameterizedTest {
 		protected StartTestItemRQ buildStartStepRq(ITestResult testResult) {
 			final StartTestItemRQ rq = super.buildStartStepRq(testResult);
 			if (testResult.getParameters() != null && testResult.getParameters().length != 0) {
-				final Set<String> tags = Optional.fromNullable(rq.getTags()).or(new HashSet<>());
+				final Set<ItemAttributeResource> attributes = Optional.fromNullable(rq.getAttributes()).or(new HashSet<>());
 				for (Object param : testResult.getParameters()) {
-					tags.add(param.toString());
+					attributes.add(new ItemAttributeResource(null, param.toString()));
 				}
-				rq.setTags(tags);
+				rq.setAttributes(attributes);
 
 			}
 			return rq;
@@ -78,10 +79,7 @@ public class ParameterizedTest {
 		protected FinishTestItemRQ buildFinishTestMethodRq(String status, ITestResult testResult) {
 			FinishTestItemRQ finishTestItemRQ = super.buildFinishTestMethodRq(status, testResult);
 			if (testResult.getThrowable() != null) {
-				String description =
-						"```error\n"
-								+ Throwables.getStackTraceAsString(testResult.getThrowable())
-								+ "\n```";
+				String description = "```error\n" + Throwables.getStackTraceAsString(testResult.getThrowable()) + "\n```";
 				description = description + Throwables.getStackTraceAsString(testResult.getThrowable());
 				finishTestItemRQ.setDescription(description);
 			}

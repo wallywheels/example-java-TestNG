@@ -40,7 +40,7 @@
         <dependency>
             <groupId>com.github.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>6791be1</version>
+            <version>ec635c9a59</version>
         </dependency>
 
         <dependency>
@@ -49,10 +49,16 @@
             <version>2.9.3</version>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>com.epam.reportportal</groupId>-->
+            <!--<artifactId>logger-java-logback</artifactId>-->
+            <!--<version>4.0.0</version>-->
+        <!--</dependency>-->
+
         <dependency>
-            <groupId>com.epam.reportportal</groupId>
+            <groupId>com.github.reportportal</groupId>
             <artifactId>logger-java-logback</artifactId>
-            <version>4.0.0</version>
+            <version>1ba2f8db</version>
         </dependency>
 
 
