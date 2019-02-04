@@ -38,9 +38,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.reportportal</groupId>
+            <groupId>com.epam.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>fa9c080</version>
+            <version>4.2.1</version>
         </dependency>
 
         <dependency>
