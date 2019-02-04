@@ -45,6 +45,13 @@ public class LoggingTest {
     }
 
     @Test
+    public void logHar() throws IOException {
+        File file = File.createTempFile("har", ".json");
+        Resources.asByteSource(Resources.getResource("files/har.har")).copyTo(Files.asByteSink(file));
+        LoggingUtils.log(file, "I'm logging HAR");
+    }
+
+    @Test
     public void logJavascript() throws IOException {
         File file = File.createTempFile("rp-test", ".js");
         Resources.asByteSource(Resources.getResource("files/javascript.js")).copyTo(Files.asByteSink(file));

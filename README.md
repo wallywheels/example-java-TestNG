@@ -26,7 +26,7 @@ git clone https://github.com/reportportal/example-java-TestNG-logback.git
 
 
 Detailed documentation available here:
-  - http://reportportal.io/#documentation/TestNG
-  - http://reportportal.io/#documentation/Logback
+  - https://github.com/reportportal/agent-java-testNG
+  - http://reportportal.io/docs/Logging-Integration%3Elog4j
 
 
