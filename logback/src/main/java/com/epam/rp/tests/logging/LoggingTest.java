@@ -44,12 +44,12 @@ public class LoggingTest {
         LoggingUtils.log(file, "I'm logging ZIP");
     }
 
-    @Test
-    public void logHar() throws IOException {
-        File file = File.createTempFile("har", ".json");
-        Resources.asByteSource(Resources.getResource("files/har.har")).copyTo(Files.asByteSink(file));
-        LoggingUtils.log(file, "I'm logging HAR");
-    }
+//    @Test
+//    public void logHar() throws IOException {
+//        File file = File.createTempFile("har", ".json");
+//        Resources.asByteSource(Resources.getResource("files/har.har")).copyTo(Files.asByteSink(file));
+//        LoggingUtils.log(file, "I'm logging HAR");
+//    }
 
     @Test
     public void logJavascript() throws IOException {
