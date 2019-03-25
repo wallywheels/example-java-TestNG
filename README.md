@@ -1,10 +1,9 @@
 ### Integration example TestNG+logback and TestNG+log4j2
 
-Java stack example. 
-
-* contains structure integration - agent. TestNG Listener
-* logging integration with LogBack
-* screenshot attachement
+* step-by-step instruction 
+* structure integration - agent. TestNG Listener
+* logging integration with [LogBack](https://github.com/reportportal/example-java-TestNG/tree/master/logback) and [Log4j](https://github.com/reportportal/example-java-TestNG/tree/master/log4j)
+* [screenshot attachement](https://github.com/reportportal/example-java-TestNG/tree/master/logback/src/main/java/com/epam/rp/tests/logging)
 
 Download this example with:
 
