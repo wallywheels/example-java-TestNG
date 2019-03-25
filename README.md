@@ -1,6 +1,6 @@
 ### Integration example TestNG+logback and TestNG+log4j2
 
-* step-by-step instruction 
+* [step-by-step instruction](https://github.com/reportportal/example-java-TestNG/blob/master/README.md#reportportal-integration-with-testng)
 * structure integration - agent. TestNG Listener
 * logging integration with [LogBack](https://github.com/reportportal/example-java-TestNG/tree/master/logback) and [Log4j](https://github.com/reportportal/example-java-TestNG/tree/master/log4j)
 * [screenshot attachement](https://github.com/reportportal/example-java-TestNG/tree/master/logback/src/main/java/com/epam/rp/tests/logging)
