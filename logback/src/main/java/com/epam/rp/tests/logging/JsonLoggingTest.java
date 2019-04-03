@@ -18,7 +18,7 @@ import java.io.IOException;
 public class JsonLoggingTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JsonLoggingTest.class);
-    public static final String JSON_FILE_PATH = "xml/file.json";
+    private static final String JSON_FILE_PATH = "xml/file.json";
 
     @Test
     public void logJsonBase64() throws IOException {
