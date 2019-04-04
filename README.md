@@ -54,8 +54,8 @@ Create Java Class `BaseTest`:
 ```java
 package com.mycompany.testBase;
 
-  public class BaseTest {
-    // some base steps for all tests
+    public class BaseTest {
+      // some base steps for all tests
 }
 ```
 
@@ -68,8 +68,8 @@ package com.mycompany.tests;
 
 import com.mycompany.testBase.BaseTest;
 
-  public class MyTests extends BaseTest {
-    // some steps for tests
+    public class MyTests extends BaseTest {
+      // some steps for tests
 }
 ```
 
