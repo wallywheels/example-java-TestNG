@@ -31,13 +31,13 @@
         <dependency>
             <groupId>com.epam.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>4.0.0-BETA-1</version>
+            <version>4.2.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.epam.reportportal</groupId>
             <artifactId>logger-java-log4j</artifactId>
-            <version>4.0.0-BETA-1</version>
+            <version>4.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -64,7 +64,7 @@
                     <!-- Uncomment it if you don't want your build to be failed in case of test errors -->
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <xmlFile>suites/logging_tests.xml</xmlFile>
+                        <suiteXmlFilexmlFile>suites/logging_tests.xml</suiteXmlFilexmlFile>
                     </suiteXmlFiles>
                     <!-- ADD working directory to get TestNG know we to find suite files -->
                     <workingDirectory>./</workingDirectory>
@@ -73,10 +73,6 @@
                         <property>
                             <name>usedefaultlisteners</name>
                             <value>false</value>
-                        </property>
-                        <property>
-                            <name>listener</name>
-                            <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
                         </property>
                     </properties>
                 </configuration>
