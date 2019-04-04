@@ -47,9 +47,9 @@ In this manual we’ll assume that Report Portal is installed and running on <ht
 
 #### Step 2 - Create project structure
 
-2.1 Create package `com.mycompany.testBase` in `./src/main/java` folder.
+##### 2.1 Create package `com.mycompany.testBase` in `./src/main/java` folder.
 
-2.2 Create Java Class `BaseTest`:
+##### 2.2 Create Java Class `BaseTest`:
 
 ```java
 package com.mycompany.testBase;
@@ -59,9 +59,9 @@ package com.mycompany.testBase;
 }
 ```
 
-2.3 Create package `com.mycompany.tests` in `./src/test/java` folder.
+##### 2.3 Create package `com.mycompany.tests` in `./src/test/java` folder.
 
-2.4 Create Java Class `MyTests`:
+##### 2.4 Create Java Class `MyTests`:
 
 ```java
 package com.mycompany.tests;
