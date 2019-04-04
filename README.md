@@ -370,7 +370,7 @@ Add the following code to your TestNG xml suite file (e.g. `./test_suites/MyTest
 ```
 Pay attention, that if you use this approach, only the results from this suite will be sent to ReportPortal, since the listener is declared only in this suite
 
-*Full xml test suite file:*
+*Full xml test suite file `MyTestsSuite.xml`:*
 ```xml
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
 <suite name="My Test Suite">
