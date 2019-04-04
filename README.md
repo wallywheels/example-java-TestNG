@@ -51,8 +51,9 @@ Create package `com.mycompany.testBase` in `./src/main/java` folder.
 
 Create Java Class `BaseTest`:
 
-```xml
+```java
 package com.mycompany.testBase;
+
   public class BaseTest {
     // some base steps for all tests
 }
@@ -62,9 +63,11 @@ Create package `com.mycompany.tests` in `./src/test/java` folder.
 
 Create Java Class `MyTests`:
 
-```xml
+```java
 package com.mycompany.tests;
+
 import com.mycompany.testBase.BaseTest;
+
   public class MyTests extends BaseTest {
     // some steps for tests
 }
@@ -78,7 +81,7 @@ Here is an example of the project structure you should have
 
 ##### 3.1 Add following repository:
 
-```xml
+```java
 <repositories>
      <repository>
         <snapshots>
