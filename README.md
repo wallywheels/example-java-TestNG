@@ -47,6 +47,29 @@ In this manual we’ll assume that Report Portal is installed and running on <ht
 
 #### Step 2 - Create project structure
 
+Create package `com.mycompany.testBase` in `./src/main/java` folder.
+
+Create Java Class `BaseTest`:
+
+```xml
+package com.mycompany.testBase;
+  public class BaseTest {
+    // some base steps for all tests
+}
+```
+
+Create package `com.mycompany.tests` in `./src/test/java` folder.
+
+Create Java Class `MyTests`:
+
+```xml
+package com.mycompany.tests;
+import com.mycompany.testBase.BaseTest;
+  public class MyTests extends BaseTest {
+    // some steps for tests
+}
+```
+
 Here is an example of the project structure you should have
 
 ![Project structure](screens/step_project_structure.png)
