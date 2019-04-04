@@ -286,7 +286,7 @@ Go to *Administrative* -> *My Test Project* -> *Members* -> *Add user*
 
 ![RP. Add user](screens/step_add_user.png)
 
-#### Step 6 - Add `reportportal.properties`
+#### Step 6 - Add `reportportal.properties` file into `resources` folder
 Now that you have created new user in your project, you can get `reportportal.properties` file example from the user *Profile* page
  
 To do that, login as created user and go to *User icon* in header -> *Profile*  
