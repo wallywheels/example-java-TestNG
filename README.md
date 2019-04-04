@@ -173,16 +173,12 @@ If you prefer using **Log4j** logging library, add following dependencies:
            <version>2.16</version>
               <configuration>
                 <suiteXmlFiles>
-                  <xmlFile>test_suites/MyTestsSuite.xml</xmlFile>
+                  <suiteXmlFilexmlFile>test_suites/MyTestsSuite.xml</suiteXmlFilexmlFile>
                 </suiteXmlFiles>
                 <properties>
                   <property>
                     <name>usedefaultlisteners</name> <!-- disabling default listeners is optional -->
                     <value>false</value>
-                  </property>
-                  <property>
-                    <name>listener</name>
-                    <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
                   </property>
                 </properties>
                </configuration>
