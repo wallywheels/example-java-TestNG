@@ -70,7 +70,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.16</version>
+                <version>2.22.1</version>
                 <configuration>
 
                     <!-- Uncomment it if you don't want your build to be failed in case of test errors -->
@@ -78,21 +78,21 @@
                     <suiteXmlFiles>
                         <!--<xmlFile>suites/issue27.xml</xmlFile>-->
                         <!--<xmlFile>suites/randomizer_suite.xml</xmlFile>-->
-                        <xmlFile>suites/logging_tests.xml</xmlFile>
+                        <xmlFile>suites/logging_inner_tests.xml</xmlFile>
                     </suiteXmlFiles>
                     <!-- ADD working directory to get TestNG know we to find suite files -->
                     <workingDirectory>./</workingDirectory>
 
-                    <!--<properties>-->
-                        <!--<property>-->
-                            <!--<name>usedefaultlisteners</name>-->
-                            <!--<value>false</value>-->
-                        <!--</property>-->
-                        <!--<property>-->
-                            <!--<name>listener</name>-->
-                            <!--<value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>-->
-                        <!--</property>-->
-                    <!--</properties>-->
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>com.epam.rp.tests.extension.ExtendedListener</value>
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
 
@@ -100,7 +100,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.0</version>
+                <version>3.8.0</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
