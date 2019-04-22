@@ -68,8 +68,8 @@ public class ParameterizedTest {
 				final Set<ItemAttributeResource> attributes = Optional.fromNullable(rq.getAttributes()).or(new HashSet<>());
 				for (Object param : testResult.getParameters()) {
 					attributes.add(new ItemAttributeResource(null, param.toString()));
-					attributes.add(new ItemAttributeResource("sldc", "EU"));
-					attributes.add(new ItemAttributeResource("slid", "afab7a393be2432db004f0edf3971b4f"));
+					attributes.add(new ItemAttributeResource("SLDC", "EU"));
+					attributes.add(new ItemAttributeResource("SLID", "afab7a393be2432db004f0edf3971b4f"));
 				}
 				rq.setAttributes(attributes);
 
