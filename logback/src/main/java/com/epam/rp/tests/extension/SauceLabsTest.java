@@ -109,6 +109,6 @@ public class SauceLabsTest implements SauceOnDemandSessionIdProvider {
 	}
 
 	private static String sauceUserName = "Pavel_bortnik";
-	private static String sauceAccessKey = "f8c124f5-8c9f-48ec-b5cd-de6d09c6b17b";
+	private static String sauceAccessKey = "";
 	private static String sauceURL = "https://ondemand.eu-central-1.saucelabs.com/wd/hub";
 }
