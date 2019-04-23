@@ -12,7 +12,6 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -24,10 +23,12 @@ import java.util.*;
  *
  * @author Andrei Varabyeu
  */
-@Listeners(ExtendedListener.class)
+//@Listeners(ExtendedListener.class)
 public class SauceLabsTest implements SauceOnDemandSessionIdProvider {
 
 	private static WebDriver driver;
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(RetryTest.class);
 
 	@BeforeClass
 	public static void init() throws MalformedURLException {
@@ -36,10 +37,6 @@ public class SauceLabsTest implements SauceOnDemandSessionIdProvider {
 		 *  and security. If you're not sure how to use env variables, refer to this guide -
 		 * https://wiki.saucelabs.com/display/DOCS/Best+Practice%3A+Use+Environment+Variables+for+Authentication+Credentials
 		 * or check testng-README.md */
-
-		String sauceUserName = "Pavel_bortnik";
-		String sauceAccessKey = "f8c124f5-8c9f-48ec-b5cd-de6d09c6b17b";
-		String sauceURL = "https://ondemand.eu-central-1.saucelabs.com/wd/hub";
 
 		/**
 		 * Here we set DesiredCapabilities, in this exercise we set additional capabilities below that align with
@@ -85,8 +82,12 @@ public class SauceLabsTest implements SauceOnDemandSessionIdProvider {
 	public void shouldOpenChrome() throws MalformedURLException {
 
 		/** Don't forget to enter in your application's URL in place of 'https://www.saucedemo.com'. */
+		LOGGER.info("Initialize Web Driver parameters");
+		LOGGER.info("Opening a new browser session");
+		LOGGER.info("Navigate to https://www.saucedemo.com");
 		driver.navigate().to("https://www.saucedemo.com");
 
+		LOGGER.info("Get page source");
 		String pageSource = driver.getPageSource();
 
 		Assert.assertTrue(true);
@@ -111,4 +112,8 @@ public class SauceLabsTest implements SauceOnDemandSessionIdProvider {
 		}
 		return null;
 	}
+
+	private static String sauceUserName = "Pavel_bortnik";
+	private static String sauceAccessKey = "f8c124f5-8c9f-48ec-b5cd-de6d09c6b17b";
+	private static String sauceURL = "https://ondemand.eu-central-1.saucelabs.com/wd/hub";
 }
