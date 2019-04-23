@@ -1,6 +1,8 @@
 package com.epam.rp.tests.extension;
 
+import com.epam.reportportal.listeners.Statuses;
 import com.epam.reportportal.testng.BaseTestNGListener;
+import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 import org.testng.ITestResult;
 
 /**
@@ -9,13 +11,5 @@ import org.testng.ITestResult;
 public class ExtendedListener extends BaseTestNGListener {
 	public ExtendedListener() {
 		super(new ParamTaggingTestNgService());
-	}
-
-	@Override
-	public void onTestStart(ITestResult testResult) {
-		System.out.println(testResult.getMethod().getInvocationCount());
-
-		System.out.println(testResult.getMethod().getCurrentInvocationCount());
-		super.onTestStart(testResult);
 	}
 }

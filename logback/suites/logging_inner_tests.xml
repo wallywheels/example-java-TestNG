@@ -1,17 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Inner Logging Tests" parallel="classes" thread-count="10">
+<suite name="Saucelabs">
 
-    <test name="Parametrized Test">
-        <parameter name="message" value="My great message"/>
+    <test name="Saucelabs test">
         <classes>
-            <class name="com.epam.rp.tests.parametrized.ParametrizedTest"/>
+            <class name="com.epam.rp.tests.extension.SauceLabsTest"/>
         </classes>
     </test>
-
-    <!--<test name="Retry test">-->
-        <!--<classes>-->
-            <!--<class name="com.epam.rp.tests.extension.RetryTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
 
 </suite>

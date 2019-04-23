@@ -2,7 +2,7 @@ package com.epam.rp.tests.parametrized;
 
 import com.epam.reportportal.annotations.ParameterKey;
 import com.epam.reportportal.annotations.UniqueID;
-import com.epam.rp.tests.extension.ParameterizedTest;
+import com.epam.rp.tests.extension.SauceLabsTest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ParametrizedTest {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(ParameterizedTest.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SauceLabsTest.class);
 
 	@Test
 	@Parameters({ "message" })

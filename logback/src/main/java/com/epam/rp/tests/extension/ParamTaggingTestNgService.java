@@ -4,6 +4,7 @@ import com.epam.reportportal.testng.TestNGService;
 import com.epam.ta.reportportal.ws.model.FinishTestItemRQ;
 import com.epam.ta.reportportal.ws.model.ItemAttributeResource;
 import com.epam.ta.reportportal.ws.model.StartTestItemRQ;
+import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 import org.testng.ITestResult;
 import rp.com.google.common.base.Optional;
 import rp.com.google.common.base.Throwables;
@@ -19,27 +20,28 @@ public class ParamTaggingTestNgService extends TestNGService {
 	@Override
 	protected StartTestItemRQ buildStartStepRq(ITestResult testResult) {
 		final StartTestItemRQ rq = super.buildStartStepRq(testResult);
-		if (testResult.getParameters() != null && testResult.getParameters().length != 0) {
+		SauceOnDemandSessionIdProvider sessionIdProvider = (SauceOnDemandSessionIdProvider) testResult.getInstance();
+		if (sessionIdProvider != null && sessionIdProvider.getSessionId() != null) {
+			String sessionId = sessionIdProvider.getSessionId();
 			final Set<ItemAttributeResource> attributes = Optional.fromNullable(rq.getAttributes()).or(new HashSet<>());
-			for (Object param : testResult.getParameters()) {
-				attributes.add(new ItemAttributeResource(null, param.toString()));
-				attributes.add(new ItemAttributeResource("SLDC", "EU"));
-				attributes.add(new ItemAttributeResource("SLID", "afab7a393be2432db004f0edf3971b4f"));
-			}
+			attributes.add(new ItemAttributeResource("SLDC", "EU"));
+			attributes.add(new ItemAttributeResource("SLID", sessionId));
 			rq.setAttributes(attributes);
-
 		}
 		return rq;
 	}
 
-	@Override
-	protected FinishTestItemRQ buildFinishTestMethodRq(String status, ITestResult testResult) {
-		FinishTestItemRQ finishTestItemRQ = super.buildFinishTestMethodRq(status, testResult);
-		if (testResult.getThrowable() != null) {
-			String description = "```error\n" + Throwables.getStackTraceAsString(testResult.getThrowable()) + "\n```";
-			description = description + Throwables.getStackTraceAsString(testResult.getThrowable());
-			finishTestItemRQ.setDescription(description);
-		}
-		return finishTestItemRQ;
-	}
+//	@Override
+//	protected FinishTestItemRQ buildFinishTestMethodRq(String status, ITestResult testResult) {
+//		FinishTestItemRQ rq = super.buildFinishTestMethodRq(status, testResult);
+//		SauceOnDemandSessionIdProvider sessionIdProvider = (SauceOnDemandSessionIdProvider) testResult.getInstance();
+//		if (sessionIdProvider != null && sessionIdProvider.getSessionId() != null) {
+//			String sessionId = sessionIdProvider.getSessionId();
+//			final Set<ItemAttributeResource> attributes = Optional.fromNullable(rq.getAttributes()).or(new HashSet<>());
+//			attributes.add(new ItemAttributeResource("SLDC", "EU"));
+//			attributes.add(new ItemAttributeResource("SLID", sessionId));
+//			rq.setAttributes(attributes);
+//		}
+//		return rq;
+//	}
 }
