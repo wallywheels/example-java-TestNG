@@ -10,9 +10,6 @@ import rp.com.google.common.base.Optional;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author <a href="mailto:pavel_bortnik@epam.com">Pavel Bortnik</a>
- */
 public class ParamTaggingTestNgService extends TestNGService {
 
 	@Override
@@ -23,8 +20,10 @@ public class ParamTaggingTestNgService extends TestNGService {
 		if (sessionIdProvider != null && sessionIdProvider.getSessionId() != null) {
 			String sessionId = sessionIdProvider.getSessionId();
 			final Set<ItemAttributeResource> attributes = Optional.fromNullable(rq.getAttributes()).or(new HashSet<>());
+
 			attributes.add(new ItemAttributeResource("SLDC", "EU"));
 			attributes.add(new ItemAttributeResource("SLID", sessionId));
+
 			rq.setAttributes(attributes);
 		}
 

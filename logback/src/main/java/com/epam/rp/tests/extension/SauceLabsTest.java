@@ -18,12 +18,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
 
-/**
- * Extension example
- *
- * @author Andrei Varabyeu
- */
-//@Listeners(ExtendedListener.class)
 public class SauceLabsTest implements SauceOnDemandSessionIdProvider {
 
 	private static WebDriver driver;
@@ -85,6 +79,7 @@ public class SauceLabsTest implements SauceOnDemandSessionIdProvider {
 		LOGGER.info("Initialize Web Driver parameters");
 		LOGGER.info("Opening a new browser session");
 		LOGGER.info("Navigate to https://www.saucedemo.com");
+
 		driver.navigate().to("https://www.saucedemo.com");
 
 		LOGGER.info("Get page source");
