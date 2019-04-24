@@ -70,23 +70,22 @@
                     <!-- Uncomment it if you don't want your build to be failed in case of test errors -->
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <xmlFile>suites/issue27.xml</xmlFile>
+                        <xmlFile>suites/analyzer.xml</xmlFile>
                         <!--<xmlFile>suites/randomizer_suite.xml</xmlFile>-->
                         <!--<xmlFile>suites/logging_tests.xml</xmlFile>-->
                     </suiteXmlFiles>
                     <!-- ADD working directory to get TestNG know we to find suite files -->
                     <workingDirectory>./</workingDirectory>
-
-                    <!--<properties>-->
-                        <!--<property>-->
-                            <!--<name>usedefaultlisteners</name>-->
-                            <!--<value>false</value>-->
-                        <!--</property>-->
-                        <!--<property>-->
-                            <!--<name>listener</name>-->
-                            <!--<value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>-->
-                        <!--</property>-->
-                    <!--</properties>-->
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
 
