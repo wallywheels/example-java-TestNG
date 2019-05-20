@@ -8,20 +8,12 @@
 Download this example with:
 
 ```shell
-git clone https://github.com/reportportal/example-java-TestNG-logback.git
+git clone https://github.com/reportportal/example-java-TestNG.git
 ```
 
-  1. Open `pom.xml` and un-comment 
-    - repository
-    - dependencies
-    - properties - listener
-  2. Open `logback.xml` and un-comment 
-    - appender RP
-    - logger - `binary_data_logger`
-    - appender-ref RP
-  3. Update `reportportal.properties` file according to you profile page
-  4. Navigate to folder with `pom.xml`
-  5. call `mvn clean test`
+  1. Update `reportportal.properties` file according to you profile page
+  2. Navigate to folder with `pom.xml`
+  3. call `mvn clean test`
 
 
 Detailed documentation available here:
@@ -55,6 +47,32 @@ In this manual we’ll assume that Report Portal is installed and running on <ht
 
 #### Step 2 - Create project structure
 
+##### 2.1 Create package `com.mycompany.testBase` in `./src/main/java` folder.
+
+##### 2.2 Create Java Class `BaseTest`:
+
+```java
+package com.mycompany.testBase;
+
+    public class BaseTest {
+      // some base steps for all tests
+}
+```
+
+##### 2.3 Create package `com.mycompany.tests` in `./src/test/java` folder.
+
+##### 2.4 Create Java Class `MyTests`:
+
+```java
+package com.mycompany.tests;
+
+import com.mycompany.testBase.BaseTest;
+
+    public class MyTests extends BaseTest {
+      // some steps for tests
+}
+```
+
 Here is an example of the project structure you should have
 
 ![Project structure](screens/step_project_structure.png)
@@ -63,7 +81,7 @@ Here is an example of the project structure you should have
 
 ##### 3.1 Add following repository:
 
-```xml
+```java
 <repositories>
      <repository>
         <snapshots>
@@ -155,16 +173,12 @@ If you prefer using **Log4j** logging library, add following dependencies:
            <version>2.16</version>
               <configuration>
                 <suiteXmlFiles>
-                  <xmlFile>test_suites/MyTestsSuite.xml</xmlFile>
+                  <suiteXmlFilexmlFile>test_suites/MyTestsSuite.xml</suiteXmlFilexmlFile>
                 </suiteXmlFiles>
                 <properties>
                   <property>
                     <name>usedefaultlisteners</name> <!-- disabling default listeners is optional -->
                     <value>false</value>
-                  </property>
-                  <property>
-                    <name>listener</name>
-                    <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
                   </property>
                 </properties>
                </configuration>
@@ -272,7 +286,7 @@ Go to *Administrative* -> *My Test Project* -> *Members* -> *Add user*
 
 ![RP. Add user](screens/step_add_user.png)
 
-#### Step 6 - Add `reportportal.properties`
+#### Step 6 - Add `reportportal.properties` file into `resources` folder
 Now that you have created new user in your project, you can get `reportportal.properties` file example from the user *Profile* page
  
 To do that, login as created user and go to *User icon* in header -> *Profile*  
@@ -356,7 +370,7 @@ Add the following code to your TestNG xml suite file (e.g. `./test_suites/MyTest
 ```
 Pay attention, that if you use this approach, only the results from this suite will be sent to ReportPortal, since the listener is declared only in this suite
 
-*Full xml test suite file:*
+*Full xml test suite file `MyTestsSuite.xml`:*
 ```xml
 <!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
 <suite name="My Test Suite">
