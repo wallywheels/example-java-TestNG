@@ -1,9 +1,6 @@
 package com.epam.rp.tests;
 
 import com.epam.reportportal.testng.ReportPortalTestNGListener;
-import org.testng.IMethodInstance;
-import org.testng.IMethodInterceptor;
-import org.testng.ITestContext;
 import org.testng.ITestNGListener;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -16,7 +13,9 @@ import java.util.List;
  * @author Andrei Varabyeu
  */
 public class Runner {
+
     public static void main(String[] args) {
+
         TestNG testNG = new TestNG(false);
         List<Class<? extends ITestNGListener>> classes = new ArrayList<>();
         classes.add(ReportPortalTestNGListener.class);

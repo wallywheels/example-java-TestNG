@@ -14,6 +14,7 @@ import java.io.IOException;
  * Created by avarabyeu on 3/9/17.
  */
 public class LoggingTest {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(JsonLoggingTest.class);
 
     @Test

@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 public class XmlLoggingBetterTest {
 
-	public static final String XML_FILE_PATH = "xml/file.xml";
+	private static final String XML_FILE_PATH = "xml/file.xml";
 
 	@Test
 	public void logXmlBase64() throws IOException {

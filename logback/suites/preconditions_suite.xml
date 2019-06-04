@@ -1,5 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Preconditions Suite">
+
+    <listeners>
+        <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+    </listeners>
+
     <test verbose="1" name="Failed 'Before' methods">
         <classes>
             <class name="com.epam.rp.tests.preconditions.FailedBeforesTest"/>

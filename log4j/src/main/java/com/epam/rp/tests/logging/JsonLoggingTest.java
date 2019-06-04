@@ -1,13 +1,11 @@
 package com.epam.rp.tests.logging;
 
-import com.epam.reportportal.message.ReportPortalMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.testng.annotations.Test;
 import rp.com.google.common.io.BaseEncoding;
 import rp.com.google.common.io.Files;
 import rp.com.google.common.io.Resources;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.message.ObjectMessage;
-import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,8 +17,8 @@ import java.io.IOException;
  */
 public class JsonLoggingTest {
 
-    private static final Logger LOGGER = LogManager.getLogger(JsonLoggingTest.class);
-    public static final String JSON_FILE_PATH = "xml/file.json";
+    private static final Logger LOGGER = LoggerFactory.getLogger(JsonLoggingTest.class);
+    private static final String JSON_FILE_PATH = "xml/file.json";
 
     @Test
     public void logJsonBase64() throws IOException {
@@ -41,13 +39,6 @@ public class JsonLoggingTest {
         }
         Thread.sleep(5000L);
 
-    }
-
-    @Test
-    public void logRepMessage() throws IOException, InterruptedException {
-        /* here we are logging some binary data as file (useful for selenium) */
-        File file = File.createTempFile("rp-test", ".json");
-        LOGGER.info(new ObjectMessage(new ReportPortalMessage(file, "File message")));
     }
 
 }
