@@ -1,5 +1,6 @@
 package com.epam.rp.tests.logging;
 
+import com.epam.reportportal.service.ReportPortal;
 import com.google.common.io.BaseEncoding;
 import com.google.common.io.Files;
 import com.google.common.io.Resources;
@@ -9,6 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * JUST an example of file logging
@@ -17,28 +19,36 @@ import java.io.IOException;
  */
 public class JsonLoggingTest {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(JsonLoggingTest.class);
-    public static final String JSON_FILE_PATH = "xml/file.json";
+	public static final String JSON_FILE_PATH = "xml/file.json";
+	private static final Logger LOGGER = LoggerFactory.getLogger(JsonLoggingTest.class);
 
-    @Test
-    public void logJsonBase64() throws IOException {
-        /* here we are logging some binary data as BASE64 string */
-        LOGGER.info("RP_MESSAGE#BASE64#{}#{}",
-                BaseEncoding.base64().encode(Resources.asByteSource(Resources.getResource(JSON_FILE_PATH)).read()),
-                "I'm logging content via BASE64");
-    }
+	@Test
+	public void logJsonBase64() throws IOException {
+		/* here we are logging some binary data as BASE64 string */
+		ReportPortal.emitLaunchLog("LAUNCH LOG MESAGE", "error", new Date());
 
-    @Test
-    public void logJsonFile() throws IOException, InterruptedException {
-        /* here we are logging some binary data as file (useful for selenium) */
-        File file = File.createTempFile("rp-test", ".json");
-        Resources.asByteSource(Resources.getResource(JSON_FILE_PATH)).copyTo(Files.asByteSink(file));
+		File file = File.createTempFile("rp-test", ".css");
+		Resources.asByteSource(Resources.getResource("files/css.css")).copyTo(Files.asByteSink(file));
+		ReportPortal.emitLaunchLog("LAUNCH LOG MESAGE WITH ATTACHMENT", "error", new Date(), file);
 
-        for (int i = 0; i < 1; i++) {
-            LOGGER.info("RP_MESSAGE#FILE#{}#{}", file.getAbsolutePath(), "I'm logging content via temp file");
-        }
-        Thread.sleep(5000L);
+		LOGGER.info(
+				"RP_MESSAGE#BASE64#{}#{}",
+				BaseEncoding.base64().encode(Resources.asByteSource(Resources.getResource(JSON_FILE_PATH)).read()),
+				"I'm logging content via BASE64"
+		);
+	}
 
-    }
+	@Test
+	public void logJsonFile() throws IOException, InterruptedException {
+		/* here we are logging some binary data as file (useful for selenium) */
+		File file = File.createTempFile("rp-test", ".json");
+		Resources.asByteSource(Resources.getResource(JSON_FILE_PATH)).copyTo(Files.asByteSink(file));
+
+		for (int i = 0; i < 1; i++) {
+			LOGGER.info("RP_MESSAGE#FILE#{}#{}", file.getAbsolutePath(), "I'm logging content via temp file");
+		}
+		Thread.sleep(5000L);
+
+	}
 
 }

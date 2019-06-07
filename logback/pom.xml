@@ -40,7 +40,7 @@
         <dependency>
             <groupId>com.github.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>54a8f89</version>
+            <version>fe2864ba</version>
         </dependency>
 
         <dependency>
@@ -58,7 +58,7 @@
         <dependency>
             <groupId>com.github.reportportal</groupId>
             <artifactId>logger-java-logback</artifactId>
-            <version>5727ed0</version>
+            <version>671f740</version>
         </dependency>
 
 
