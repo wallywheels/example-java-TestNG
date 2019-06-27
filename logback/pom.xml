@@ -40,7 +40,7 @@
         <dependency>
             <groupId>com.github.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>fe2864ba</version>
+            <version>9ced737</version>
         </dependency>
 
         <dependency>
