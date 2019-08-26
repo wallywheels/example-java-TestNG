@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Listeners(ReportPortalTestNGListener.class)
+//@Listeners(ReportPortalTestNGListener.class)
 public class RetryTest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(RetryTest.class);

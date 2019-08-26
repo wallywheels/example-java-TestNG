@@ -34,14 +34,20 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>20.0</version>
+            <version>26.0-jre</version>
         </dependency>
 
         <dependency>
-            <groupId>com.github.reportportal</groupId>
+            <groupId>com.epam.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
-            <version>9ced737</version>
+            <version>5.0.0-BETA-5</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.github.reportportal</groupId>-->
+<!--            <artifactId>agent-java-testng</artifactId>-->
+<!--            <version>1782cf6</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -49,17 +55,17 @@
             <version>2.9.3</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>com.epam.reportportal</groupId>-->
-            <!--<artifactId>logger-java-logback</artifactId>-->
-            <!--<version>4.0.0</version>-->
-        <!--</dependency>-->
-
         <dependency>
-            <groupId>com.github.reportportal</groupId>
+            <groupId>com.epam.reportportal</groupId>
             <artifactId>logger-java-logback</artifactId>
-            <version>671f740</version>
+            <version>5.0.0-BETA-3</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.github.reportportal</groupId>-->
+<!--            <artifactId>logger-java-logback</artifactId>-->
+<!--            <version>36edc97</version>-->
+<!--        </dependency>-->
 
 
     </dependencies>
