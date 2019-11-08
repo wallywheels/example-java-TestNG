@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 36, Failures: 3, Errors: 0, Skipped: 3, Time elapsed: 16.366 sec <<< FAILURE! - in TestSuite
+noChancesBeforeClass(com.epam.rp.tests.preconditions.FailedBeforesTest)  Time elapsed: 0.814 sec  <<< FAILURE!
+java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [3]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at com.epam.rp.tests.preconditions.FailedBeforesTest.noChancesBeforeClass(FailedBeforesTest.java:23)
+
+someSeriousTest1(com.epam.rp.tests.preconditions.FailedAftersTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: expected [You asked me once," said O'Brien, "what was in Room 101. I told you that you knew the answer already. Everyone knows it. The thing that is in Room 101 is the worst thing in the world] but found [You asked me once," said O'Brien, "what was in Room 101. I told you that you knew the answer already. Everyone knows it. The thing that is in Room 101 is the worst thing in the world.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.epam.rp.tests.preconditions.FailedAftersTest.someSeriousTest1(FailedAftersTest.java:28)
+
+fiftyFiftyAfterMethod(com.epam.rp.tests.preconditions.FailedAftersTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: You are not lucky, man! expected [5] but found [7]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at com.epam.rp.tests.preconditions.FailedAftersTest.fiftyFiftyAfterMethod(FailedAftersTest.java:22)
+
