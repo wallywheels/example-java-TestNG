@@ -1,5 +1,8 @@
 This is the working maven project that can push the test results to the Report Portal of choice!!!
 
+Looks like the 'rp.launch =' line is the name that gets tagged with the results when published.  That is found in the reportportal.properties file
+
+
 ### Integration example TestNG+logback and TestNG+log4j2
 
 * [step-by-step instruction](https://github.com/reportportal/example-java-TestNG/blob/master/README.md#reportportal-integration-with-testng)
