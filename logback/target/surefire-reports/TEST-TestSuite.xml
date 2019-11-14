@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="26.009" tests="36" errors="0" skipped="3" failures="3">
+<testsuite name="TestSuite" time="26.811" tests="38" errors="0" skipped="7" failures="3">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="13+33"/>
@@ -59,8 +59,8 @@
     <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="noChancesBeforeClass" classname="com.epam.rp.tests.preconditions.FailedBeforesTest" time="0.814">
-    <failure message="It was not so many chances, that this method pass expected [1] but found [3]" type="java.lang.AssertionError">java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [3]
+  <testcase name="noChancesBeforeClass" classname="com.epam.rp.tests.preconditions.FailedBeforesTest" time="1.525">
+    <failure message="It was not so many chances, that this method pass expected [1] but found [13]" type="java.lang.AssertionError">java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [13]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -68,24 +68,24 @@
 	at org.testng.Assert.assertEquals(Assert.java:652)
 	at com.epam.rp.tests.preconditions.FailedBeforesTest.noChancesBeforeClass(FailedBeforesTest.java:23)
 </failure>
-    <system-out><![CDATA[14:40:26.844 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
+    <system-out><![CDATA[08:01:30.378 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
 WARNING! More than one ReportPortal listener is added
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
-14:40:26.848 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
+08:01:30.398 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
 WARNING! More than one ReportPortal listener is added
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
-14:40:26.848 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
+08:01:30.398 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
 WARNING! More than one ReportPortal listener is added
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
-14:40:26.848 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
+08:01:30.398 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
 WARNING! More than one ReportPortal listener is added
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
-14:40:27.162 INFO  c.e.r.s.Launch - main - Not rerun!
-14:40:27.331 INFO  c.e.r.t.p.FailedBeforesTest - main - Are you lucky?
+08:01:30.812 INFO  c.e.r.s.Launch - main - Not rerun!
+08:01:31.239 INFO  c.e.r.t.p.FailedBeforesTest - main - Are you lucky?
 ]]></system-out>
   </testcase>
   <testcase name="fiftyFiftyBeforeMethod" classname="com.epam.rp.tests.preconditions.FailedBeforesTest" time="0">
@@ -104,12 +104,10 @@ WARNING! More than one ReportPortal listener is added
 	at org.testng.Assert.assertEquals(Assert.java:463)
 	at com.epam.rp.tests.preconditions.FailedAftersTest.someSeriousTest1(FailedAftersTest.java:28)
 </failure>
-    <system-out><![CDATA[14:40:27.352 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-1 - Logging context completed
-14:40:27.350 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-7 - Logging context completed
+    <system-out><![CDATA[08:01:31.456 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-1 - Logging context completed
+08:01:31.453 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-7 - Logging context completed
 ]]></system-out>
   </testcase>
-  <testcase name="someSeriousTest2" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0"/>
-  <testcase name="someSeriousTest3" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0"/>
   <testcase name="fiftyFiftyAfterMethod" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0.001">
     <failure message="You are not lucky, man! expected [5] but found [7]" type="java.lang.AssertionError">java.lang.AssertionError: You are not lucky, man! expected [5] but found [7]
 	at org.testng.Assert.fail(Assert.java:96)
@@ -119,38 +117,55 @@ WARNING! More than one ReportPortal listener is added
 	at org.testng.Assert.assertEquals(Assert.java:652)
 	at com.epam.rp.tests.preconditions.FailedAftersTest.fiftyFiftyAfterMethod(FailedAftersTest.java:22)
 </failure>
-    <system-out><![CDATA[14:40:27.358 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-12 - Logging context completed
+  </testcase>
+  <testcase name="someSeriousTest2" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="fiftyFiftyAfterMethod" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
+    <skipped/>
+    <system-out><![CDATA[08:01:31.459 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-1 - Logging context completed
+08:01:31.460 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-3 - Logging context completed
+]]></system-out>
+  </testcase>
+  <testcase name="someSeriousTest3" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="fiftyFiftyAfterMethod" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
+    <skipped/>
+    <system-out><![CDATA[08:01:31.461 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-12 - Logging context completed
 ]]></system-out>
   </testcase>
   <testcase name="noCnancesAfterClass" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
     <skipped/>
+    <system-out><![CDATA[08:01:31.462 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-7 - Logging context completed
+]]></system-out>
   </testcase>
-  <testcase name="testHigherBound" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0"/>
+  <testcase name="testHigherBound" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0.001"/>
   <testcase name="testHigherBoundExceeded" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0.001"/>
-  <testcase name="testLowerBound" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0"/>
+  <testcase name="testLowerBound" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0.001"/>
   <testcase name="testLowerBoundExceeded" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0"/>
   <testcase name="testRandomizerGenerator" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0"/>
-  <testcase name="testRandomizerNevenLies" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0.014"/>
-  <testcase name="testRandomizerProbability" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0.006"/>
-  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.003"/>
-  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5"/>
-  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.001"/>
-  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.002"/>
-  <testcase name="logImageBase64" classname="com.epam.rp.tests.logging.LuckyPugTest" time="1.108"/>
+  <testcase name="testRandomizerNevenLies" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0.06"/>
+  <testcase name="testRandomizerProbability" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0.059"/>
+  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="4.918"/>
+  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.01"/>
+  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.018"/>
+  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.019"/>
+  <testcase name="logImageBase64" classname="com.epam.rp.tests.logging.LuckyPugTest" time="4.894"/>
   <testcase name="logXmlBase64" classname="com.epam.rp.tests.logging.XmlLoggingTest" time="0"/>
   <testcase name="logXmlFile" classname="com.epam.rp.tests.logging.XmlLoggingTest" time="0"/>
   <testcase name="logXmlBase64" classname="com.epam.rp.tests.logging.XmlLoggingBetterTest" time="0"/>
   <testcase name="logXmlFile" classname="com.epam.rp.tests.logging.XmlLoggingBetterTest" time="0"/>
   <testcase name="logJsonBase64" classname="com.epam.rp.tests.logging.JsonLoggingTest" time="0.001"/>
-  <testcase name="logJsonFile" classname="com.epam.rp.tests.logging.JsonLoggingTest" time="4.026"/>
+  <testcase name="logJsonFile" classname="com.epam.rp.tests.logging.JsonLoggingTest" time="0.251"/>
   <testcase name="logCmd" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
   <testcase name="logCss" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
   <testcase name="logCsv" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
   <testcase name="logHar" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
-  <testcase name="logHtml" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
+  <testcase name="logHtml" classname="com.epam.rp.tests.logging.LoggingTest" time="0.003"/>
   <testcase name="logJavascript" classname="com.epam.rp.tests.logging.LoggingTest" time="0.003"/>
-  <testcase name="logPdf" classname="com.epam.rp.tests.logging.LoggingTest" time="0.009"/>
-  <testcase name="logPhp" classname="com.epam.rp.tests.logging.LoggingTest" time="0.004"/>
+  <testcase name="logPdf" classname="com.epam.rp.tests.logging.LoggingTest" time="0.012"/>
+  <testcase name="logPhp" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
   <testcase name="logPlain" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
-  <testcase name="logZip" classname="com.epam.rp.tests.logging.LoggingTest" time="0.003"/>
+  <testcase name="logZip" classname="com.epam.rp.tests.logging.LoggingTest" time="0.021"/>
 </testsuite>

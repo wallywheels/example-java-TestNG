@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 36, Failures: 3, Errors: 0, Skipped: 3, Time elapsed: 16.366 sec <<< FAILURE! - in TestSuite
-noChancesBeforeClass(com.epam.rp.tests.preconditions.FailedBeforesTest)  Time elapsed: 0.814 sec  <<< FAILURE!
-java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [3]
+Tests run: 38, Failures: 3, Errors: 0, Skipped: 7, Time elapsed: 18.177 sec <<< FAILURE! - in TestSuite
+noChancesBeforeClass(com.epam.rp.tests.preconditions.FailedBeforesTest)  Time elapsed: 1.525 sec  <<< FAILURE!
+java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [13]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)

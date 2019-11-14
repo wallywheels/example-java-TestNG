@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * Several tests for magic randomizer
@@ -63,7 +64,7 @@ public class TestRandomizer {
 	}
 
 	private Integer calculatePercentage(int count, int value, int scale) {
-		return BigDecimal.valueOf(value).divide(BigDecimal.valueOf(count), scale, BigDecimal.ROUND_HALF_UP)
+		return BigDecimal.valueOf(value).divide(BigDecimal.valueOf(count), scale, RoundingMode.HALF_UP)
 				.multiply(BigDecimal.valueOf(100)).intValue();
 	}
 }
