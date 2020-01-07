@@ -1,66 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="26.05" tests="38" errors="0" skipped="7" failures="3">
+<testsuite name="TestSuite" time="26.018" tests="38" errors="0" skipped="7" failures="4">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="13+33"/>
-    <property name="sun.boot.library.path" value="C:\Tech\jdk-13\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\wdelrio\Documents\GitHub\example-java-TestNG\logback"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
+    <property name="java.vm.version" value="25.221-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\wdelrio\Documents\GitHub\example-java-TestNG\logback"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="sun.os.patch.level" value=""/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\wdelrio\Documents\GitHub\example-java-TestNG\logback"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="13+33"/>
+    <property name="java.runtime.version" value="1.8.0_221-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Users\wdelrio\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Tech\apache-maven\bin\..\bin\m2.conf"/>
+    <property name="classworlds.conf" value="C:\apache-maven\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Tech\jdk-13\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft SDKs\Azure\AzCopy;C:\Program Files\PuTTY\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git\cmd;C:\Users\wdelrio\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\wdelrio\AppData\Local\Programs\Python\Python37-32\;C:\Users\wdelrio\AppData\Local\Microsoft\WindowsApps;C:\Users\wdelrio\AppData\Local\GitHubDesktop\bin;C:\Users\wdelrio\AppData\Local\Microsoft\WindowsApps;C:\Users\wdelrio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Tech\apache-maven\bin;C:\Tech\jdk-13;."/>
-    <property name="maven.conf" value="C:\Tech\apache-maven\bin\../conf"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="57.0"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_221\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft SDKs\Azure\AzCopy;C:\Program Files\PuTTY\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Java\jdk1.8.0_221\bin;C:\apache-maven\bin;C:\Program Files\Git\cmd;C:\Users\wdelrio\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\wdelrio\AppData\Local\Programs\Python\Python37-32\;C:\Users\wdelrio\AppData\Local\Microsoft\WindowsApps;C:\Users\wdelrio\AppData\Local\GitHubDesktop\bin;C:\Users\wdelrio\AppData\Local\Microsoft\WindowsApps;C:\Users\wdelrio\AppData\Local\Programs\Microsoft VS Code\bin;C:\Tech\apache-maven\bin;C:\Tech\jdk-13;C:\Program Files\JetBrains\IntelliJ IDEA 2019.3\bin;."/>
+    <property name="maven.conf" value="C:\apache-maven\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:\Tech\apache-maven\bin\..\lib\jansi-native"/>
+    <property name="library.jansi.path" value="C:\apache-maven\bin\..\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\wdelrio"/>
     <property name="user.timezone" value="America/Chicago"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1252"/>
-    <property name="java.specification.version" value="13"/>
     <property name="user.name" value="wdelrio"/>
-    <property name="java.class.path" value="C:\Tech\apache-maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
-    <property name="java.vm.specification.version" value="13"/>
+    <property name="java.class.path" value="C:\apache-maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_221\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
-    <property name="java.home" value="C:\Tech\jdk-13"/>
-    <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="13"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_221"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_221\jre\classes"/>
     <property name="sun.stderr.encoding" value="cp437"/>
-    <property name="maven.home" value="C:\Tech\apache-maven\bin\.."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\apache-maven\bin\.."/>
     <property name="file.separator" value="\"/>
-    <property name="java.version.date" value="2019-09-17"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="noChancesBeforeClass" classname="com.epam.rp.tests.preconditions.FailedBeforesTest" time="0.875">
-    <failure message="It was not so many chances, that this method pass expected [1] but found [3]" type="java.lang.AssertionError">java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [3]
+  <testcase name="noChancesBeforeClass" classname="com.epam.rp.tests.preconditions.FailedBeforesTest" time="0.874">
+    <failure message="It was not so many chances, that this method pass expected [1] but found [8]" type="java.lang.AssertionError">java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [8]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -68,24 +73,24 @@
 	at org.testng.Assert.assertEquals(Assert.java:652)
 	at com.epam.rp.tests.preconditions.FailedBeforesTest.noChancesBeforeClass(FailedBeforesTest.java:23)
 </failure>
-    <system-out><![CDATA[09:50:30.032 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
+    <system-out><![CDATA[09:40:02.160 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
 WARNING! More than one ReportPortal listener is added
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
-09:50:30.036 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
+09:40:02.165 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
 WARNING! More than one ReportPortal listener is added
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
-09:50:30.037 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
+09:40:02.165 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
 WARNING! More than one ReportPortal listener is added
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
-09:50:30.037 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
+09:40:02.165 WARN  c.e.r.t.BaseTestNGListener - main - WARNING! More than one ReportPortal listener is added
 WARNING! More than one ReportPortal listener is added
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
 [TestNG] [WARN] Ignoring duplicate listener : com.epam.reportportal.testng.ReportPortalTestNGListener
-09:50:30.408 INFO  c.e.r.s.Launch - main - Not rerun!
-09:50:30.582 INFO  c.e.r.t.p.FailedBeforesTest - main - Are you lucky?
+09:40:02.595 INFO  c.e.r.s.Launch - main - Not rerun!
+09:40:02.751 INFO  c.e.r.t.p.FailedBeforesTest - main - Are you lucky?
 ]]></system-out>
   </testcase>
   <testcase name="fiftyFiftyBeforeMethod" classname="com.epam.rp.tests.preconditions.FailedBeforesTest" time="0">
@@ -104,12 +109,12 @@ WARNING! More than one ReportPortal listener is added
 	at org.testng.Assert.assertEquals(Assert.java:463)
 	at com.epam.rp.tests.preconditions.FailedAftersTest.someSeriousTest1(FailedAftersTest.java:28)
 </failure>
-    <system-out><![CDATA[09:50:30.600 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-7 - Logging context completed
-09:50:30.601 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-1 - Logging context completed
+    <system-out><![CDATA[09:40:02.803 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-1 - Logging context completed
+09:40:02.771 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-7 - Logging context completed
 ]]></system-out>
   </testcase>
-  <testcase name="fiftyFiftyAfterMethod" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0.002">
-    <failure message="You are not lucky, man! expected [5] but found [8]" type="java.lang.AssertionError">java.lang.AssertionError: You are not lucky, man! expected [5] but found [8]
+  <testcase name="fiftyFiftyAfterMethod" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0.001">
+    <failure message="You are not lucky, man! expected [5] but found [9]" type="java.lang.AssertionError">java.lang.AssertionError: You are not lucky, man! expected [5] but found [9]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -123,49 +128,158 @@ WARNING! More than one ReportPortal listener is added
   </testcase>
   <testcase name="fiftyFiftyAfterMethod" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
     <skipped/>
-    <system-out><![CDATA[09:50:30.606 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-1 - Logging context completed
-09:50:30.606 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-3 - Logging context completed
-]]></system-out>
   </testcase>
   <testcase name="someSeriousTest3" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
     <skipped/>
+    <system-out><![CDATA[09:40:02.808 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-1 - Logging context completed
+09:40:02.808 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-3 - Logging context completed
+]]></system-out>
   </testcase>
   <testcase name="fiftyFiftyAfterMethod" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
     <skipped/>
-    <system-out><![CDATA[09:50:30.607 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-12 - Logging context completed
+    <system-out><![CDATA[09:40:02.808 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-12 - Logging context completed
 ]]></system-out>
   </testcase>
   <testcase name="noCnancesAfterClass" classname="com.epam.rp.tests.preconditions.FailedAftersTest" time="0">
     <skipped/>
-    <system-out><![CDATA[09:50:30.608 DEBUG c.e.r.u.SubscriptionUtils - RxComputationThreadPool-7 - Logging context completed
+  </testcase>
+  <testcase name="testHigherBound" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0"/>
+  <testcase name="testHigherBoundExceeded" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0"/>
+  <testcase name="testLowerBound" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0"/>
+  <testcase name="testLowerBoundExceeded" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0"/>
+  <testcase name="testRandomizerGenerator" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0"/>
+  <testcase name="testRandomizerNevenLies" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0.008"/>
+  <testcase name="testRandomizerProbability" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0.01">
+    <failure message="Probability should be in range [25..35], but actual value is 40 expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Probability should be in range [25..35], but actual value is 40 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at com.epam.rp.tests.randomizer.TestRandomizer.testRandomizerProbability(TestRandomizer.java:61)
+</failure>
+    <system-out><![CDATA[09:40:02.820 INFO  c.e.r.t.r.TestRandomizer - main - Testing randomizer with 100 tryings for 30 probability
+09:40:02.820 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.820 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.820 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.820 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.820 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.821 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.822 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.823 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.824 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result true
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 DEBUG c.e.r.t.MagicRandomizer - main - Generating [TRUE/FALSE] with probability 30%. Result false
+09:40:02.825 INFO  c.e.r.t.r.TestRandomizer - main - We have 36 'yes' answers from 100 asks
+09:40:02.825 INFO  c.e.r.t.r.TestRandomizer - main - Calculated probability is 40
 ]]></system-out>
   </testcase>
-  <testcase name="testHigherBound" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0.001"/>
-  <testcase name="testHigherBoundExceeded" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0.001"/>
-  <testcase name="testLowerBound" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0"/>
-  <testcase name="testLowerBoundExceeded" classname="com.epam.rp.tests.randomizer.TestRandomizerBoundaries" time="0.001"/>
-  <testcase name="testRandomizerGenerator" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0"/>
-  <testcase name="testRandomizerNevenLies" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0.007"/>
-  <testcase name="testRandomizerProbability" classname="com.epam.rp.tests.randomizer.TestRandomizer" time="0.01"/>
-  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.002"/>
+  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5"/>
   <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.003"/>
-  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.004"/>
-  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.005"/>
-  <testcase name="logImageBase64" classname="com.epam.rp.tests.logging.LuckyPugTest" time="0.941"/>
+  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.003"/>
+  <testcase name="testParams" classname="com.epam.rp.tests.parametrized.ParametrizedTest" time="5.003"/>
+  <testcase name="logImageBase64" classname="com.epam.rp.tests.logging.LuckyPugTest" time="0.945"/>
   <testcase name="logXmlBase64" classname="com.epam.rp.tests.logging.XmlLoggingTest" time="0"/>
   <testcase name="logXmlFile" classname="com.epam.rp.tests.logging.XmlLoggingTest" time="0"/>
   <testcase name="logXmlBase64" classname="com.epam.rp.tests.logging.XmlLoggingBetterTest" time="0"/>
   <testcase name="logXmlFile" classname="com.epam.rp.tests.logging.XmlLoggingBetterTest" time="0"/>
   <testcase name="logJsonBase64" classname="com.epam.rp.tests.logging.JsonLoggingTest" time="0.001"/>
-  <testcase name="logJsonFile" classname="com.epam.rp.tests.logging.JsonLoggingTest" time="4.171"/>
-  <testcase name="logCmd" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
+  <testcase name="logJsonFile" classname="com.epam.rp.tests.logging.JsonLoggingTest" time="4.142"/>
+  <testcase name="logCmd" classname="com.epam.rp.tests.logging.LoggingTest" time="0.003"/>
   <testcase name="logCss" classname="com.epam.rp.tests.logging.LoggingTest" time="0.001"/>
-  <testcase name="logCsv" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
-  <testcase name="logHar" classname="com.epam.rp.tests.logging.LoggingTest" time="0.001"/>
+  <testcase name="logCsv" classname="com.epam.rp.tests.logging.LoggingTest" time="0.001"/>
+  <testcase name="logHar" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
   <testcase name="logHtml" classname="com.epam.rp.tests.logging.LoggingTest" time="0.001"/>
-  <testcase name="logJavascript" classname="com.epam.rp.tests.logging.LoggingTest" time="0.001"/>
-  <testcase name="logPdf" classname="com.epam.rp.tests.logging.LoggingTest" time="0.011"/>
+  <testcase name="logJavascript" classname="com.epam.rp.tests.logging.LoggingTest" time="0.007"/>
+  <testcase name="logPdf" classname="com.epam.rp.tests.logging.LoggingTest" time="0.007"/>
   <testcase name="logPhp" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
   <testcase name="logPlain" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
-  <testcase name="logZip" classname="com.epam.rp.tests.logging.LoggingTest" time="0.002"/>
+  <testcase name="logZip" classname="com.epam.rp.tests.logging.LoggingTest" time="0.001"/>
 </testsuite>

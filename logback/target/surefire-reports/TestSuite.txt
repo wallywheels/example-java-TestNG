@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 38, Failures: 3, Errors: 0, Skipped: 7, Time elapsed: 17.559 sec <<< FAILURE! - in TestSuite
-noChancesBeforeClass(com.epam.rp.tests.preconditions.FailedBeforesTest)  Time elapsed: 0.875 sec  <<< FAILURE!
-java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [3]
+Tests run: 38, Failures: 4, Errors: 0, Skipped: 7, Time elapsed: 17.802 sec <<< FAILURE! - in TestSuite
+noChancesBeforeClass(com.epam.rp.tests.preconditions.FailedBeforesTest)  Time elapsed: 0.874 sec  <<< FAILURE!
+java.lang.AssertionError: It was not so many chances, that this method pass expected [1] but found [8]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
@@ -21,12 +21,19 @@ java.lang.AssertionError: expected [You asked me once," said O'Brien, "what was 
 	at org.testng.Assert.assertEquals(Assert.java:463)
 	at com.epam.rp.tests.preconditions.FailedAftersTest.someSeriousTest1(FailedAftersTest.java:28)
 
-fiftyFiftyAfterMethod(com.epam.rp.tests.preconditions.FailedAftersTest)  Time elapsed: 0.002 sec  <<< FAILURE!
-java.lang.AssertionError: You are not lucky, man! expected [5] but found [8]
+fiftyFiftyAfterMethod(com.epam.rp.tests.preconditions.FailedAftersTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: You are not lucky, man! expected [5] but found [9]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:652)
 	at com.epam.rp.tests.preconditions.FailedAftersTest.fiftyFiftyAfterMethod(FailedAftersTest.java:22)
+
+testRandomizerProbability(com.epam.rp.tests.randomizer.TestRandomizer)  Time elapsed: 0.01 sec  <<< FAILURE!
+java.lang.AssertionError: Probability should be in range [25..35], but actual value is 40 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at com.epam.rp.tests.randomizer.TestRandomizer.testRandomizerProbability(TestRandomizer.java:61)
 
